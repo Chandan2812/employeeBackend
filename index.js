@@ -11,9 +11,9 @@ const app=express()
 
 app.use(express.json())
 app.use(cors())
-app.use("/",userRouter)
+app.use("/users",userRouter)
 app.use(authenticate)
-app.use("/",empRouter)
+app.use("/employee",empRouter)
 
 
 app.listen(process.env.PORT,async ()=>{
